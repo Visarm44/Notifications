@@ -44,7 +44,7 @@ while True:
             invia_notifica("Meteo Galliate", f"Ci sono {temperature}°C", icon_path)
     except Exception as e:
         current_timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        error_message = f"[ERRORE] {now} - Connection to {url} failed. Dettaglio: {e}\n"
+        error_message = f"[ERRORE] {current_timestamp} - Connection to {url} failed. Dettaglio: {e}\n"
         with open("error_log.txt", "a") as f:
             f.write(error_message)
         
