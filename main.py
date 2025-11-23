@@ -4,6 +4,7 @@ import random
 from PIL import Image
 from functions import *
 import os
+import datetime
 
 current_folder =os.path.dirname(os.path.abspath(__file__))
 
@@ -26,6 +27,9 @@ while True:
 
             invia_notifica("Task da Fare", f"Task: {message} \nCompletion status: {completion}", icon_path)
     except:
-        print("Connection to API failed")
+        time = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+        error_log = f"Connection to {url} failed at: {time}"
+        with open("error_log.txt", "a") as f:
+            txt.dump(error_log, f)
     
     time.sleep(15)
