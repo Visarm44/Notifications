@@ -1,0 +1,2 @@
+[ERRORE] 2025-11-24 00:05:21 - Connection to https://api.open-meteo.com/v1/forecast?latitude=45.4794&longitude=8.6982&current_weather=true failed. Dettaglio: name 'icon_path' is not defined
+[ERRORE] 2025-11-24 00:05:36 - Connection to https://api.open-meteo.com/v1/forecast?latitude=45.4794&longitude=8.6982&current_weather=true failed. Dettaglio: name 'icon_path' is not defined

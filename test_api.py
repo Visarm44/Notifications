@@ -1,6 +1,6 @@
 import requests
 
-url = "https://jsonplaceholder.typicode.com/todos/1"
+url = "https://api.open-meteo.com/v1/forecast?latitude=45.4794&longitude=8.6982&current_weather=true"
 
 response = requests.get(url)
 
@@ -10,5 +10,4 @@ print(f"Status: {status}")
 
 data = response.json()
 
-print(f"Titolo: {data["title"]}")
-print(f"Completion: {data["completed"]}")
+print(data)
