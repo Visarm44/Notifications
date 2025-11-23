@@ -3,8 +3,11 @@ import time
 import random
 from PIL import Image
 from functions import *
+import os
 
-icon = "Icon1.png"
+current_folder =os.path.dirname(os.path.abspath(__file__))
+
+icon_path = os.path.join(current_folder, "Icon1.png")
 
 base_url = "https://jsonplaceholder.typicode.com/todos/"
 while True:
@@ -21,7 +24,7 @@ while True:
             message = data["title"]
             completion = data["completed"]
 
-            invia_notifica("Task da Fare", f"Task: {message} \nCompletion status: {completion}", icon)
+            invia_notifica("Task da Fare", f"Task: {message} \nCompletion status: {completion}", icon_path)
     except:
         print("Connection to API failed")
     
